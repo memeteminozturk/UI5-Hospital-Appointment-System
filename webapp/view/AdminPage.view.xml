@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="project1.controller.AdminPage"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+
+    <App id="app">
+        <pages>
+            <Page class="app-page">
+                <mvc:XMLView viewName="project1.view.Toolbar" />
+                <content>
+                    <List>
+                        <StandardListItem
+                            title="Add a new doctor"
+                            type="Navigation"
+                            press="onAdminPanel" />
+                        <StandardListItem
+                            title="Edit doctors"
+                            type="Navigation"
+                            press="onEditDoctors" />
+                    </List>
+                </content>
+            </Page>
+        </pages>
+    </App>
+
+</mvc:View>

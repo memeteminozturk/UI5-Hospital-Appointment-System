@@ -1,0 +1,15 @@
+<mvc:View controllerName="project1.controller.Toolbar"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Toolbar class="toolbar">
+        <content>
+            <Title text="{i18n>headerLeft}" />
+            <ToolbarSpacer />
+            <Link text="{i18n>home}" press="onHome" id="home-link" />
+            <Link text="{i18n>login}" press="onLogin" id="login-link" />
+            <Link text="{i18n>signup}"  press="onSignUp" id="signup-link" />
+            <Link text="Log Out" press="onLogout" id="logout-link" />
+            <Text text="{/loggedUser}" id="logged-user" />
+        </content>
+    </Toolbar> 
+</mvc:View>

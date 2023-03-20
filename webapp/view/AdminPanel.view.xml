@@ -1,0 +1,71 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:fiori="sap.ui.webc.fiori"
+    xmlns:layout="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    controllerName="project1.controller.AdminPanel"
+>
+    <Page class="admin-panel-page">
+        <content>
+            <Title text="Add New Doctor" />
+            <VBox>
+                <l:VerticalLayout
+                    xmlns:l="sap.ui.layout"
+                    width="100%"
+                    class="sapUiNoContentPadding w-300"
+                >
+                    <Label text="Doctor Name" labelFor="doctorName" />
+                    <Input
+                        value="{/doctorName}"
+                        placeholder="Doctor Name"
+                        class="w-300 mb-1"
+                        id="doctorName"
+                    />
+
+                    <l:VerticalLayout>
+                        <Label text="Available Dates" />
+                        <u:Calendar
+                            id="calendar"
+                            select="handleCalendarSelect"
+                            intervalSelection="false"
+                            singleSelection="false" />
+                        <Button
+                            press="handleRemoveSelection"
+                            text="Remove All Selected Dates" />
+                        <List
+                            id="selectedDatesList"
+                            class="labelMarginLeft"
+                            noDataText="No Dates Selected"
+                            headerText="Selected Dates (dd-mm-yyyy)"
+                            items="{path: '/selectedDates'}">
+                            <StandardListItem
+                                title="{Date}" />
+                        </List>
+                    </l:VerticalLayout>
+                    <MultiComboBox
+                        id="availableHours"
+                        class="w-300 mb-1"
+                        placeholder="Available Hours"
+                    >
+                        <items>
+                            <core:Item text="9:00" key="1" />
+                            <core:Item text="10:00" key="2" />
+                            <core:Item text="11:00" key="3" />
+                            <core:Item text="12:00" key="4" />
+                            <core:Item text="13:00" key="5" />
+                            <core:Item text="14:00" key="6" />
+                            <core:Item text="15:00" key="7" />
+                            <core:Item text="16:00" key="8" />
+                            <core:Item text="17:00" key="9" />
+                        </items>
+                    </MultiComboBox>
+                    <Button text="Add" press="onAddDoctor" class="w-300" />
+                </l:VerticalLayout>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

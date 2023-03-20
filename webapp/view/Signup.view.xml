@@ -1,0 +1,31 @@
+<mvc:View controllerName="project1.controller.Signup"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page class="signup-page">
+        <content>
+            <Title text="{i18n>signup}" />
+            <Input id="idno-signup" placeholder="ID Number" class="d-block text-center w-300" value="{/idno-signup}" />
+            <Input
+                id="name-signup" placeholder="Name" class="d-block text-center w-300" value="{/name-signup}" />
+            <Input id="surname-signup"
+                placeholder="Surname" class="d-block text-center w-300" value="{/surname-signup}" />
+            <Input id="password-signup"
+                placeholder="Password" type="Password"
+                class="d-block text-center w-300" value="{/password-signup}" />
+            <Input id="password2-signup" placeholder="Confirm Password"
+                type="Password" class="d-block text-center w-300" value="{/password2-signup}" />
+            <Label text="Date of Birth" labelFor="DP1" class="mt-1 w-300" />
+            <DatePicker
+                id="DP1"
+                placeholder="Enter Date"
+                change="handleChange"
+                class="d-block w-300"
+                displayFormat="dd.MM.yyyy"
+                value="{/dob-signup}" />
+
+            <Button text="{i18n>signup}"
+                class="d-block w-300" press="onSubmitSignUp" />
+            <Button text="{i18n>login}" class="d-block w-300" type="Navigation" press="onLogin" />
+        </content>
+    </Page>
+</mvc:View>

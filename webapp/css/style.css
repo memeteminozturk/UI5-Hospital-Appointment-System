@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+.sapMPageWithHeader.sapMPageWithSubHeader .sapMPageHeader,
+.sapMPage .sapMPageHeader:not(.sapMIBar-CTX) .sapMIBar-CTX,
+.sapMPageWithSubHeader .sapMPageSubHeader:not(.sapMIBar-CTX) .sapMIBar-CTX {
+    display: none;
+
+}
+
+.sapMPage .sapMPageHeader:not(.sapMIBar-CTX) .sapMIBar-CTX,
+.sapMPageWithSubHeader .sapMPageSubHeader:not(.sapMIBar-CTX) .sapMIBar-CTX {
+    height: 80px;
+}
+
+.sapMIBar.sapMTB .sapMBarChild~.sapMBarChild {
+    margin-right: 80px;
+}
+
+.sapUiSizeCompact .sapMSegBBtn .sapMSegBBtnInner {
+    height: 36px;
+    line-height: 36px;
+}
+
+.sapMSegBBtn.sapMSegBtnLastVisibleButton .sapMSegBBtnInner,
+.sapMSegBBtn.sapMSegBtnLastVisibleButton .sapMSegBBtnInnerWrapper {
+    border-radius: 10px;
+}
+
+.sapMSegBBtn:first-child .sapMSegBBtnInner,
+.sapMSegBBtn:first-child .sapMSegBBtnInnerWrapper {
+    border-radius: 10px;
+}
+
+
+.d-block {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.app-page section {
+    position: relative;
+    top: 0;
+}
+
+.login-page,
+.signup-page,
+.appointment-page,
+.admin-panel-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #c28bbc89;
+}
+
+.myappointments-page,
+.app-page {
+    background-color: white;
+}
+
+.login-page section,
+.signup-page section,
+.appointment-page section,
+.admin-panel-page section {
+    width: fit-content;
+    height: fit-content;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0 12px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.login-page .sapMTitle,
+.signup-page .sapMTitle,
+.appointment-page .sapMTitle,
+.admin-panel-page .sapMTitle {
+    margin-bottom: 20px;
+}
+
+.appointment-page {
+    margin-bottom: 20px;
+}
+
+.login-page .sapMTitle span,
+.signup-page .sapMTitle span,
+.appointment-page .sapMTitle span,
+.admin-panel-page .sapMTitle #__title1-inner {
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mt-1 {
+    margin-top: 1rem !important;
+}
+
+.w-300 {
+    width: 300px !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
+.app-page :not(.sapMListModeDelete)>.sapMLIB.sapMLIBTypeNavigation {
+    padding-right: 0;
+    width: 40%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 20px;
+    text-align: center;
+    background-color: rgba(187, 164, 193, 0.592);
+    border-radius: 10px;
+}
+
+.app-page :not(.sapMListModeDelete)>.sapMLIB.sapMLIBTypeNavigation:hover {
+    background-color: rgba(187, 164, 193, 0.8);
+}
+
+.app-page .sapMListUl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app-page .sapUiSizeCompact .sapMSLITitle,
+.app-page .sapMSLITitleOnly {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.toolbar .sapMTitle.sapMTitleNoWrap {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.toolbar .sapMBarChild~.sapMBarChild {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem
+}
+
+
+.toolbar .sapMTitle span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 8vw;
+}
+
+.app-page #__item1-imgNav,
+.app-page #__item0-imgNav {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+.sapUiSizeCompact .sapMTB {
+    height: 4rem;
+}
+
+.sapMListHdrText {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.admin-panel-page .sapMListUl {
+    max-height: 100px;
+    overflow: scroll !important;
+}
+
+.edit-doctors-page #container-project1---editdoctors--selectedDatesList-listUl{
+    max-height: 200px;
+    overflow-y: scroll;
+}

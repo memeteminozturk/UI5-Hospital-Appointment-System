@@ -1,0 +1,26 @@
+<mvc:View controllerName="project1.controller.MyAppointments"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page class="myappointments-page">
+        <mvc:XMLView viewName="project1.view.Toolbar" />
+        <content>
+            <Bar class="myappointments-bar">
+                <contentMiddle>
+                    <Title class="myappointments-title" text="My Appointments" />
+                </contentMiddle>
+            </Bar>
+            <Button class="delete-button" text="Cancel" press="onDeletePress" width="200px" />
+            <List class="appointment-list" items="{/appointments}">
+                <items>
+                    <ObjectListItem title="{doctor}" type="Active" press="onListItemPress">
+                        <attributes>
+                            <ObjectAttribute text="Date: {date}" />
+                            <ObjectAttribute text="Time: {time}" />
+                            <ObjectAttribute text="Reason: {reason}" />
+                        </attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

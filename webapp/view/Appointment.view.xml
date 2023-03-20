@@ -1,0 +1,54 @@
+<mvc:View controllerName="project1.controller.Appointment"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+>
+    <Page class="appointment-page">
+        <content>
+            <Title text="{i18n>New Appointment}" class="d-block" />
+            <Label text="{i18n>Doctor}" labelFor="doctor" class="w-300" />
+            <Select id="doctor" class="d-block text-center w-300 mb-1" items="{/doctors}"
+                selectedKey="{/selectedDoctor}" change="onDoctorChange">
+                <items>
+                    <core:Item text="{name}" key="{id}" />
+                </items>
+            </Select>
+            <Label text="{i18n>Date}" labelFor="date" class="w-300" />
+            <l:VerticalLayout>
+                <u:Calendar
+                    id="calendar"
+                    select="handleCalendarSelect" 
+                    legendVisible="true"
+                    legend="legend"
+                    class="d-block w-300"
+                />
+                <u:CalendarLegend id="legend" standardItems="Today" />
+                
+                <l:HorizontalLayout>
+                    <Label
+                        text="Selected Date (dd-mm-yyyy):"
+                        class="labelMarginLeft" />
+                    <Text
+                        id="selectedDate"
+                        text="No Date Selected"
+                        class="labelMarginLeft" />
+                </l:HorizontalLayout>
+            </l:VerticalLayout>
+            <Label text="{i18n>Time}" labelFor="time" class="w-300" />
+            <Select id="time" class="d-block text-center w-300 mb-1" items="{/availableTimes}"
+                selectedKey="{/selectedTime}">
+                <items>
+                    <core:Item text="{time}" key="{id}" />
+                </items>
+            </Select>
+            <Label text="{i18n>Reason}" labelFor="reason" class="w-300" />
+            <Input id="reason" placeholder="Reason" class="d-block text-center w-300 mb-1"
+                value="{/reason}" />
+            <Button text="Submit" class="d-block w-300" type="Navigation"
+                press="onSubmitAppointment" />
+
+        </content>
+    </Page>
+</mvc:View>

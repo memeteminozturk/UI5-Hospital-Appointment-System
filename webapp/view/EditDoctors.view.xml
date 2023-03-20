@@ -1,0 +1,74 @@
+<mvc:View
+    controllerName="project1.controller.EditDoctors"
+    height="100%"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:semantic="sap.m.semantic"
+    displayBlock="true"
+    xmlns:fiori="sap.ui.webc.fiori"
+    xmlns:layout="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+>
+    <Page class="edit-doctors-page" showHeader="false" >
+        <content>
+            <SplitContainer>
+                <masterPages>
+                    <semantic:MasterPage title="Master Page Title">
+                        <List id="list" items="{/doctors}">
+                            <StandardListItem title="{name}" id="listItem" type="Active"
+                                press="onListItemPress" />
+                        </List>
+                    </semantic:MasterPage>
+                </masterPages>
+                <detailPages>
+                    <semantic:DetailPage
+                        title="Detail Page Title">
+                        <Text text="Doctor Id:{/selectedDoctor/id}" class="mb-1" />
+                        <Input id="name-input" placeholder="Enter new name" class="mb-1" value="{/selectedDoctor/name}" />
+
+                        <u:Calendar
+                            id="calendar"
+                            select="handleCalendarSelect"
+                            intervalSelection="false"
+                            singleSelection="false"
+                             />
+                        <Button
+                            press="handleRemoveSelection"
+                            text="Remove All Selected Dates" />
+                        <List
+                            id="selectedDatesList"
+                            class="labelMarginLeft"
+                            noDataText="No Dates Selected"
+                            headerText="Selected Dates (dd-mm-yyyy)"
+                            items="{path: '/selectedDates'}">
+                            <StandardListItem
+                                title="{Date}" />
+                        </List>
+                        <MultiComboBox
+                            id="availableHours"
+                            class="w-300 mb-1"
+                            placeholder="Available Hours"
+                            selectedKeys="{/selectedDoctorAvailable/time}"
+                        >
+                            <items>
+                                <core:Item text="9:00" key="1" />
+                                <core:Item text="10:00" key="2" />
+                                <core:Item text="11:00" key="3" />
+                                <core:Item text="12:00" key="4" />
+                                <core:Item text="13:00" key="5" />
+                                <core:Item text="14:00" key="6" />
+                                <core:Item text="15:00" key="7" />
+                                <core:Item text="16:00" key="8" />
+                                <core:Item text="17:00" key="9" />
+                            </items>
+                        </MultiComboBox>
+                        <Button text="Save" press="onSave" class="mb-1" />
+                        <Button text="Delete" press="onDelete" class="mb-1" />
+
+                    </semantic:DetailPage>
+                </detailPages>
+            </SplitContainer>
+        </content>
+    </Page>
+</mvc:View>

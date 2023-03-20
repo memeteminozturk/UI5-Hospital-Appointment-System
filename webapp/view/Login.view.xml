@@ -1,0 +1,19 @@
+<mvc:View controllerName="project1.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page class="login-page">
+        <content>
+            <Title text="{i18n>login}" />
+            <Input id="idno-login" placeholder="ID Number" class="d-block text-center w-300"
+                value="{/idno-login}" />
+            <Input id="password-login" placeholder="Password" type="Password"
+                class="d-block text-center w-300" value="{/password-login}" />
+            <Button text="{i18n>login}" class="d-block w-300" type="Navigation"
+                press="onSubmitLogin" />
+            <Button text="{i18n>signup}" class="d-block w-300" type="Navigation" press="onSignUp" />
+            <Button text="reset appointments" class="d-block w-300" press="onResetAppointments" />
+            
+
+        </content>
+    </Page>
+</mvc:View>
